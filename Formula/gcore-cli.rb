@@ -15,7 +15,8 @@ class GcoreCli < Formula
 
       def install
         bin.install "gcore-cli_darwin_amd64" => "gcore-cli"
-#        generate_completions_from_executable(bin/"gcore-cli", "completion")
+        chmod 0555, bin/"gcore-cli"
+        generate_completions_from_executable(bin/"gcore-cli", "completion")
       end
     end
     if Hardware::CPU.arm?
@@ -24,7 +25,8 @@ class GcoreCli < Formula
 
       def install
         bin.install "gcore-cli_darwin_arm64" => "gcore-cli"
-#        generate_completions_from_executable(bin/"gcore-cli", "completion")
+        chmod 0555, bin/"gcore-cli"
+        generate_completions_from_executable(bin/"gcore-cli", "completion")
       end
     end
   end
@@ -36,7 +38,8 @@ class GcoreCli < Formula
 
       def install
         bin.install "gcore-cli_linux_amd64" => "gcore-cli"
-#        generate_completions_from_executable(bin/"gcore-cli", "completion")
+        chmod 0555, bin/"gcore-cli"
+        generate_completions_from_executable(bin/"gcore-cli", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -45,7 +48,8 @@ class GcoreCli < Formula
 
       def install
         bin.install "gcore-cli_linux_arm64" => "gcore-cli"
-#        generate_completions_from_executable(bin/"gcore-cli", "completion")
+        chmod 0555, bin/"gcore-cli"
+        generate_completions_from_executable(bin/"gcore-cli", "completion")
       end
     end
   end
