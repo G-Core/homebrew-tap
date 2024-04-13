@@ -5,13 +5,13 @@
 class GcoreCli < Formula
   desc "The official Gcore CLI"
   homepage "https://github.com/G-Core/gcore-cli"
-  version "0.1.1"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/g-core/gcore-cli/releases/download/v0.1.1/gcore-cli_darwin_amd64"
-      sha256 "c1fcff5dfd9bd6719f1d223123964f35d5d6dfe299aa476b4d370f248012eeed"
+      url "https://github.com/g-core/gcore-cli/releases/download/v0.2.0/gcore-cli_darwin_amd64"
+      sha256 "fc5ebd0abba198fad7ecc67601591a368a22fbbb2a6ea68330bb2c8b263df14d"
 
       def install
         bin.install "gcore-cli_darwin_amd64" => "gcore-cli"
@@ -20,8 +20,8 @@ class GcoreCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/g-core/gcore-cli/releases/download/v0.1.1/gcore-cli_darwin_arm64"
-      sha256 "17292bfefebb4420ff3502b6c9f04538ceeb5228755f4975e07f1863dcc00042"
+      url "https://github.com/g-core/gcore-cli/releases/download/v0.2.0/gcore-cli_darwin_arm64"
+      sha256 "4a6d7d10bf77019b41fb17596e454209f713176afa9f62c7e0244f24802007f6"
 
       def install
         bin.install "gcore-cli_darwin_arm64" => "gcore-cli"
@@ -33,8 +33,8 @@ class GcoreCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/g-core/gcore-cli/releases/download/v0.1.1/gcore-cli_linux_amd64"
-      sha256 "7568abd8b613cbda6d8385eb6ad05402a86a5a5b687a38be0c9490395cea7930"
+      url "https://github.com/g-core/gcore-cli/releases/download/v0.2.0/gcore-cli_linux_amd64"
+      sha256 "6edaf148ad6606483647ffab2f5409d8ab7e1db963c58a5eeafd240eddd593b1"
 
       def install
         bin.install "gcore-cli_linux_amd64" => "gcore-cli"
@@ -43,8 +43,8 @@ class GcoreCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/g-core/gcore-cli/releases/download/v0.1.1/gcore-cli_linux_arm64"
-      sha256 "05d31041a7bc853e93ea769c6be90918ce35c648d9f729cfb034bd635e08ae15"
+      url "https://github.com/g-core/gcore-cli/releases/download/v0.2.0/gcore-cli_linux_arm64"
+      sha256 "c5bd8cc797540d4e40f3044b47da5172656bad9d6df3a7219d3166eb3793b8a0"
 
       def install
         bin.install "gcore-cli_linux_arm64" => "gcore-cli"
